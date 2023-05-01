@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Meet with me and Bitzer",
+        "type": "video",
+        "description": "Let's have some fun conversation with my best friend Bitzer The Dog.",
+        "price": "250",
+        "isPublished": true,
+        "isFree": false   
+    },
+    {
+        "title": "Ask Me Anything: Shaun the sheep & all the others",
+        "type": "text",
+        "description": "You can Ask me anything about the sheeps or about the farm (about the farmer, too)",
+        "price": "500",
+        "isPublished": true,
+        "isFree": false
+    },
+    {
+        "title": "Farming: 101",
+        "type": "webinar",
+        "description": "Want to learn essentials of farming, why to wait?",
+        "price": "1000",
+        "isPublished": true,
+        "isFree": false
+    },
+    {
+        "title": "Just a meet",
+        "type": "video",
+        "description": "Let's know each other more!!!",
+        "price": "00",
+        "isPublished": false,
+        "isFree": true
+    },
+    {
+        "title": "Have you met timmy?",
+        "type": "video",
+        "description": "Timmy is a baby sheep, and there is lots of things you wanna know about him!",
+        "price": "150",
+        "isPublished": true,
+        "isFree": false   
+    }
+]

@@ -8,6 +8,11 @@ import { Queries } from "./components/Queries";
 import { Bookings } from "./components/Bookings";
 import { Schedule } from "./components/Schedule";
 
+import { Video } from "./components/Service/Video";
+import { Text } from "./components/Service/Text";
+import { Webinar } from "./components/Service/Webinar";
+
+
 import { Profile, loader } from "./components/Profile";
 
 function App() {
@@ -27,7 +32,21 @@ function App() {
         },
         {
           path: "dashboard/services",
-          element: <Service/>
+          element: <Service/>,
+          children: [
+            {
+              path: 'video',
+              element: <Video/>
+            },
+            {
+              path: 'text',
+              element: <Text/>
+            },
+            {
+              path: 'webinar',
+              element: <Webinar/>
+            }
+          ]
         },
         {
           path: "dashboard/queries",
@@ -38,7 +57,7 @@ function App() {
           element: <Bookings/>
         },
         {
-          path: "dashboard/schedule",
+          path: "dashboard/schedule/",
           element: <Schedule/>
         }
       ]

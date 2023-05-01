@@ -114,9 +114,9 @@ export const Sidebar = () => {
 
         <NavMenu>
           {
-            Menu.map(item => {
+            Menu.map((item, idx) => {
               return (
-                <Link to={`dashboard/${item.title}`} style={{textDecoration: 'inherit', color: 'inherit'}}>
+                <Link to={`dashboard/${item.title}`} key={idx} style={{textDecoration: 'inherit', color: 'inherit'}}>
                   <MenuItem active={page===item.path}>
                     <span className="menu-item-icon">{item.icon}</span>
                       <span className="menu-item-title">{item.title}</span>
