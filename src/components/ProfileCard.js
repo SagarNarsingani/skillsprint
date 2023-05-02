@@ -17,7 +17,7 @@ const Card = ({service}) => {
             <div className='title'>
                 {icons[service.type]}
                 <h4>{service.title}</h4>
-                <span className='duration'> | 30min</span>
+                <span className='duration'>  {service.type==='text' ? '' : ('| ' + service.duration)}</span>
             </div>
             <p>{service.description}</p>
             <div className='price-div'>

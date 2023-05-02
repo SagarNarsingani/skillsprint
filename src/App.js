@@ -12,6 +12,8 @@ import { Video } from "./components/Service/Video";
 import { Text } from "./components/Service/Text";
 import { Webinar } from "./components/Service/Webinar";
 import { Add } from "./components/Service/Add";
+import { Edit } from "./components/Service/Edit";
+import { Basic } from "./components/Service/Basic";
 
 
 import { Profile, loader } from "./components/Profile";
@@ -52,6 +54,16 @@ function App() {
         {
           path: "dashboard/services/add",
           element: <Add/>
+        },
+        {
+          path: "dashboard/services/edit",
+          element: <Edit/>,
+          children: [
+            {
+              path: 'basic/:serviceId',
+              element: <Basic/>
+            }
+          ]
         },
         {
           path: "dashboard/queries",
