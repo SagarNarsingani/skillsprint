@@ -11,6 +11,7 @@ import { Schedule } from "./components/Schedule";
 import { Video } from "./components/Service/Video";
 import { Text } from "./components/Service/Text";
 import { Webinar } from "./components/Service/Webinar";
+import { Add } from "./components/Service/Add";
 
 
 import { Profile, loader } from "./components/Profile";
@@ -47,6 +48,10 @@ function App() {
               element: <Webinar/>
             }
           ]
+        },
+        {
+          path: "dashboard/services/add",
+          element: <Add/>
         },
         {
           path: "dashboard/queries",
