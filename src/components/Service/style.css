@@ -1,5 +1,5 @@
 .form-section{
-    margin-block: 1em;
+    margin-block: 1em 2em;
 }
 .form-section-title{
     margin-bottom: .5em;
@@ -39,8 +39,69 @@
     font-weight: 400;
     padding: 1em .25em;
 }
+.form-section-text{
+    font-size: small;
+    opacity: .6;
+}
 
 .service-opt-box{
     padding: .25em .5em;
     font-size: .9em;
+}
+
+.btn{
+    border: 1.5px solid black;
+    display: inline-block;
+    font-size: .9em;
+    padding: .5em .75em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s;
+
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.discount-form{
+    border: 1px solid black;
+    width: fit-content;
+    margin-block: 1em;
+    padding: 0.25em 0.5em;
+}
+
+.discount-form-title{
+    font-size: small;
+    margin-block: .5em .25em;
+}
+
+.discount-input:focus{
+    outline: none;
+}
+
+.discount-percentage{
+    width: 100%;
+}
+
+.discount-form-section{
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.discount-btn{
+    display: block;
+    width: fit-content;
+    margin-block: 1em .5em;
+    padding: .25em .5em;
+}
+
+.switch-label{
+    display: flex;
+    margin-block: 1em 2em;
+    align-items: center;
+}
+.switch-span{
+    margin-left: 1em;
+    font-size: small;
 }

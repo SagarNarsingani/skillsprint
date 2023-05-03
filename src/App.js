@@ -13,10 +13,12 @@ import { Text } from "./components/Service/Text";
 import { Webinar } from "./components/Service/Webinar";
 import { Add } from "./components/Service/Add";
 import { Edit } from "./components/Service/Edit";
-import { Basic } from "./components/Service/Basic";
+import { Basic } from "./components/Service/Edit/Basic";
 
 
 import { Profile, loader } from "./components/Profile";
+import { Advanced } from "./components/Service/Edit/Advanced";
+import { Share } from "./components/Service/Edit/Share";
 
 function App() {
 
@@ -62,6 +64,14 @@ function App() {
             {
               path: 'basic/:serviceId',
               element: <Basic/>
+            },
+            {
+              path: 'advanced/:serviceId',
+              element: <Advanced/>
+            },
+            {
+              path: 'share/:serviceId',
+              element: <Share/>
             }
           ]
         },

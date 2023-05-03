@@ -2,16 +2,19 @@ import styled from "styled-components"
 
 import { FiShare, FiCopy, FiEdit } from 'react-icons/fi';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
+import { Link } from "react-router-dom";
 
 export const ServiceCard = ({service}) => {
   return (
     <Card>
         <p className="title"> {service.title} </p>
-        <p className="details">30 min | {service.isFree ? 'Free' : '₹ ' + service.price}</p>
+        <p className="details">{service.duration} | {service.isFree ? 'Free' : '₹ ' + service.price}</p>
         <div className="opts">
             <FiShare className="serve-icon"/>
             <FiCopy className="serve-icon"/>
-            <FiEdit className="serve-icon"/>
+            <Link to={`/dashboard/Services/edit/basic/${service.id}`} style={{textDecoration: 'inherit', color: 'inherit'}}>
+                <FiEdit className="serve-icon"/>
+            </Link>
         </div>
         <div className="publish">
             {service.isPublished ? <AiOutlineEye className="publish-icon"/> : <AiOutlineEyeInvisible className="publish-icon"/>}

@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { useState } from 'react';
 import Switch from 'react-switch'
 
-import { prices, durations } from './data';
-import services from '../../services.json'
-import { Options } from './Options';
+import { prices, durations } from '../data';
+import services from '../../../services.json'
+import { Options } from '../Options';
 
 export const Basic = () => {
   
@@ -153,15 +153,5 @@ const Container = styled.div`
     .form-textarea-box{
         resize: none;
         padding: 1em .75em;
-    }
-
-    .switch-label{
-        display: flex;
-        margin-block: 1em;
-        align-items: center;
-        .switch-span{
-            margin-left: 1em;
-            font-size: small;
-        }
     }
 `;
