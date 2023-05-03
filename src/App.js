@@ -14,15 +14,20 @@ import { Webinar } from "./components/Service/Webinar";
 import { Add } from "./components/Service/Add";
 import { Edit } from "./components/Service/Edit";
 import { Basic } from "./components/Service/Edit/Basic";
+import { Advanced } from "./components/Service/Edit/Advanced";
+import { Share } from "./components/Service/Edit/Share";
 
 
 import { Profile, loader } from "./components/Profile";
-import { Advanced } from "./components/Service/Edit/Advanced";
-import { Share } from "./components/Service/Edit/Share";
+import Login from "./components/Login";
 
 function App() {
 
   const router = createBrowserRouter([
+    {
+      path: '/login',
+      element: <Login/>
+    },
     {
       path: '/',
       element: <Landing/>,
