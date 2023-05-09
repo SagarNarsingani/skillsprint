@@ -10,6 +10,7 @@ import { BiPhoneCall, BiFoodMenu } from 'react-icons/bi'
 import { BsCalendar3 } from 'react-icons/bs'
 import { ToastContainer, toast } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
+import { UserButton } from "@clerk/clerk-react"
 
 
 export const Sidebar = () => {
@@ -97,7 +98,8 @@ export const Sidebar = () => {
 
         <Profile>
           <div className="link">
-            <img src="/profile.jpg" alt="profile"/>
+            {/* <img src="/profile.jpg" alt="profile"/> */}
+            <UserButton/>
             <Link to={'/' + username} style={{textDecoration: 'inherit', color: 'inherit'}}>
               <span className="profile-link">skillsprint.io/shaun</span>
             </Link>

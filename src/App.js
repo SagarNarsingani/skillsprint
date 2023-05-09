@@ -1,5 +1,6 @@
 import { Landing } from "./components/Landing";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { ClerkProvider, SignedIn, SignedOut, UserButton, SignIn, SignUp } from "@clerk/clerk-react";
 
 import { Home } from "./components/Home";
 import { Finance } from "./components/Finance";
@@ -19,14 +20,15 @@ import { Share } from "./components/Service/Edit/Share";
 
 
 import { Profile, loader } from "./components/Profile";
-import Login from "./components/Login";
 
 function App() {
 
+  const key = 'pk_test_aGVscGluZy1nb3JpbGxhLTgwLmNsZXJrLmFjY291bnRzLmRldiQ'
+
   const router = createBrowserRouter([
     {
-      path: '/login',
-      element: <Login/>
+      path: 'sign-up/*',
+      element: <SignUp/>
     },
     {
       path: '/',
@@ -102,9 +104,18 @@ function App() {
     }
 ])
   return (
-      <div className="App">
-        <RouterProvider router={router}/>
-      </div>
+    <ClerkProvider publishableKey={key}>
+      <SignedIn>
+        <div className="App">
+          <RouterProvider router={router}/>
+        </div>
+      </SignedIn>
+      <SignedOut>
+        <div className="signed-out-page">
+          <SignIn/>
+        </div>
+      </SignedOut>
+    </ClerkProvider>
   );
 }
 
