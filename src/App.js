@@ -20,6 +20,9 @@ import { Share } from "./components/Service/Edit/Share";
 
 
 import { Profile, loader } from "./components/Profile";
+import { Privacy } from "./components/Privacy";
+import { Terms } from "./components/Terms";
+import { About } from "./components/About";
 
 function App() {
 
@@ -29,6 +32,18 @@ function App() {
     {
       path: 'sign-up/*',
       element: <SignUp/>
+    },
+    {
+      path: 'privacy',
+      element: <Privacy/>
+    },
+    {
+      path: 'terms',
+      element: <Terms/>
+    },
+    {
+      path: 'about',
+      element: <About/>
     },
     {
       path: '/',
